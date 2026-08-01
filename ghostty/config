@@ -28,6 +28,7 @@ cursor-style-blink = false
 # Integration & Behaviors
 copy-on-select = clipboard
 confirm-close-surface = false
+quit-after-last-window-closed = false
 shell-integration = zsh
 
 # Global Drop-Down Quick Terminal (Ctrl+`)
