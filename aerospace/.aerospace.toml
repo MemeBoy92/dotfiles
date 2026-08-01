@@ -21,9 +21,7 @@ enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
 # Callbacks / Event Hooks
-after-startup-command = [
-    'exec-and-forget open -ga Ghostty'
-]
+after-startup-command = []
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 on-focus-changed = ['move-mouse window-lazy-center']
 
@@ -41,11 +39,6 @@ outer.right = 10
 # ==========================================
 # Callbacks / Event Hooks
 # ==========================================
-
-[[on-window-detected]]
-if.app-id = 'com.mitchellh.ghostty'
-if.window-title-regex-substring = 'Quick Terminal'
-run = ['layout floating']
 
 [[on-window-detected]]
 if = 'true'

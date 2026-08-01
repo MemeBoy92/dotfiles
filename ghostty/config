@@ -28,12 +28,19 @@ cursor-style-blink = false
 # Integration & Behaviors
 copy-on-select = clipboard
 confirm-close-surface = false
-quit-after-last-window-closed = false
+quit-after-last-window-closed = true
+initial-window = true
 shell-integration = zsh
 
-# Global Drop-Down Quick Terminal (Ctrl+`)
-keybind = global:ctrl+grave_accent=toggle_quick_terminal
+# Global Drop-Down Quick Terminal (Overlay Mode)
+keybind = global:super+ctrl+alt+shift+backquote=toggle_quick_terminal
+
 quick-terminal-position = top
 quick-terminal-screen = main
-quick-terminal-animation-duration = 0.15
+quick-terminal-animation-duration = 0.12
+quick-terminal-space-behavior = move
+quick-terminal-autohide = true
 
+# Ghosty / Translucent Glassmorphism Aesthetics
+background-opacity = 0.88
+background-blur-radius = 20
