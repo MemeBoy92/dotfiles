@@ -30,8 +30,8 @@ copy-on-select = clipboard
 confirm-close-surface = false
 shell-integration = zsh
 
-# Global Drop-Down Quick Terminal (Alt+Space)
-keybind = global:alt+space=toggle_quick_terminal
+# Global Drop-Down Quick Terminal (Ctrl+`)
+keybind = global:ctrl+grave_accent=toggle_quick_terminal
 quick-terminal-position = top
 quick-terminal-screen = main
 quick-terminal-animation-duration = 0.15

@@ -41,6 +41,11 @@ outer.right = 10
 # ==========================================
 
 [[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+if.window-title-regex-substring = 'Quick Terminal'
+run = ['layout floating']
+
+[[on-window-detected]]
 if = 'true'
 run = 'exec-and-forget /bin/bash /Users/jake/.config/aerospace/smart-layout.sh'
 
