@@ -62,6 +62,7 @@ run = 'exec-and-forget /bin/bash /Users/jake/.config/aerospace/smart-layout.sh'
 
     # --- App Launchers ---
     ctrl-alt-enter = 'exec-and-forget open -a Ghostty'
+    ctrl-backtick = 'exec-and-forget /bin/bash /Users/jake/.config/aerospace/toggle-ghostty.sh'
 
     # Layout Toggles
     ctrl-alt-g = 'exec-and-forget /bin/bash /Users/jake/.config/aerospace/smart-layout.sh'
