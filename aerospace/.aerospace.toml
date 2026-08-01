@@ -1,0 +1,118 @@
+# ==========================================
+# Root Configuration
+# ==========================================
+
+# Upgrade to AeroSpace config version 2
+config-version = 2
+
+# Start AeroSpace on login
+start-at-login = true
+
+# In v2, workspaces disappear when empty by default (phantom workspaces).
+# To keep the v1 behavior where workspaces 1-9 stay alive even when empty,
+# you must explicitly declare them here.
+persistent-workspaces = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+default-root-container-layout = 'tiles'
+default-root-container-orientation = 'auto'
+
+# Automatic Normalization Rules
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+# Callbacks / Event Hooks
+after-startup-command = []
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+on-focus-changed = ['move-mouse window-lazy-center']
+
+
+# Gaps / Window Spacing
+[gaps]
+inner.horizontal = 10
+inner.vertical = 10
+outer.top = 10
+outer.bottom = 10
+outer.left = 10
+outer.right = 10
+
+
+# ==========================================
+# Callbacks / Event Hooks
+# ==========================================
+
+[[on-window-detected]]
+if = 'true'
+run = 'exec-and-forget /bin/bash /Users/jake/.config/aerospace/smart-layout.sh'
+
+
+
+# ==========================================
+# Key Bindings
+# ==========================================
+
+# 'main' binding mode
+[mode.main.binding]
+
+    # --- App Launchers ---
+    ctrl-alt-enter = 'exec-and-forget open -a Ghostty'
+
+    # Layout Toggles
+    ctrl-alt-g = 'exec-and-forget /bin/bash /Users/jake/.config/aerospace/smart-layout.sh'
+    ctrl-alt-slash = 'layout tiles horizontal vertical'
+    ctrl-alt-comma = 'layout accordion horizontal vertical'
+    ctrl-alt-space = 'layout floating tiling'
+
+    # Window Management (QoL additions)
+    ctrl-alt-f = 'fullscreen'
+    ctrl-alt-w = 'close'
+
+    # Config Management
+    ctrl-alt-shift-r = 'reload-config'
+
+    # Focus (IJKL Layout)
+    ctrl-alt-j = 'focus left'
+    ctrl-alt-k = 'focus down'
+    ctrl-alt-i = 'focus up'
+    ctrl-alt-l = 'focus right'
+
+    # Move Window (IJKL Layout)
+    ctrl-alt-shift-j = 'move left'
+    ctrl-alt-shift-k = 'move down'
+    ctrl-alt-shift-i = 'move up'
+    ctrl-alt-shift-l = 'move right'
+
+    # Resize
+    ctrl-alt-minus = 'resize smart -50'
+    ctrl-alt-equal = 'resize smart +50'
+
+    # Workspaces (Switching)
+    ctrl-alt-1 = 'workspace 1'
+    ctrl-alt-2 = 'workspace 2'
+    ctrl-alt-3 = 'workspace 3'
+    ctrl-alt-4 = 'workspace 4'
+    ctrl-alt-5 = 'workspace 5'
+    ctrl-alt-6 = 'workspace 6'
+    ctrl-alt-7 = 'workspace 7'
+    ctrl-alt-8 = 'workspace 8'
+    ctrl-alt-9 = 'workspace 9'
+
+    # Move Node to Workspace
+    ctrl-alt-shift-1 = 'move-node-to-workspace 1'
+    ctrl-alt-shift-2 = 'move-node-to-workspace 2'
+    ctrl-alt-shift-3 = 'move-node-to-workspace 3'
+    ctrl-alt-shift-4 = 'move-node-to-workspace 4'
+    ctrl-alt-shift-5 = 'move-node-to-workspace 5'
+    ctrl-alt-shift-6 = 'move-node-to-workspace 6'
+    ctrl-alt-shift-7 = 'move-node-to-workspace 7'
+    ctrl-alt-shift-8 = 'move-node-to-workspace 8'
+    ctrl-alt-shift-9 = 'move-node-to-workspace 9'
+
+    # Focus the other monitor
+    ctrl-alt-n = 'focus-monitor --wrap-around next'
+
+    # Throw the current window to the other monitor
+    ctrl-alt-shift-n = 'move-node-to-monitor --wrap-around next'
+
+    # Back and Forth / Move entire Workspace to Monitor
+    ctrl-alt-tab = 'workspace-back-and-forth'
+    ctrl-alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'

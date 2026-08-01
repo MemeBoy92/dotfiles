@@ -1,0 +1,5 @@
+pollMillis=20
+delay=1
+focusDelay=1
+requireMouseStop=true
+mouseDelta=0.2

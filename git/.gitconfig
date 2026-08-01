@@ -1,0 +1,5 @@
+[user]
+	name = jake
+	email = jmclaughlin28@students.stab.org
+[core]
+	autocrlf = input

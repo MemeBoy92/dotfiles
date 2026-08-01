@@ -1,0 +1,31 @@
+# ==========================================
+# Ghostty Configuration
+# ==========================================
+
+# Shell
+command = /bin/zsh
+
+# Font (Powerlevel10k & Nerd Fonts support)
+font-family = "MesloLGS NF"
+font-size = 13.5
+
+# Theme & Colors
+theme = Catppuccin Mocha
+
+# Window & AeroSpace Tiling Compatibility
+macos-titlebar-style = hidden
+window-padding-x = 12
+window-padding-y = 12
+window-padding-color = background
+
+# Option key as Alt (essential for Zsh / Tmux / Emacs / Neovim)
+macos-option-as-alt = true
+
+# Cursor
+cursor-style = block
+cursor-style-blink = false
+
+# Integration & Behaviors
+copy-on-select = clipboard
+confirm-close-surface = false
+shell-integration = zsh
