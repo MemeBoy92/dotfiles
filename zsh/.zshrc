@@ -115,11 +115,17 @@ source $ZSH/oh-my-zsh.sh
 # Make tab autocomplete
 bindkey '^I' autosuggest-accept
 
-# --- Modern CLI Upgrades (zoxide & eza) ---
+# --- Modern CLI Upgrades ---
 eval "$(zoxide init zsh --cmd cd)"
+source <(fzf --zsh)
 
 alias ls="eza --icons=always --group-directories-first"
 alias ll="eza -la --icons=always --group-directories-first"
 alias lt="eza --tree --icons=always --level=2"
 alias lta="eza --tree -a --icons=always --level=2"
+alias cat="bat"
+alias grep="rg"
+alias find="fd"
+alias ai='ollama run llama3.2'
+
 

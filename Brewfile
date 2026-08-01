@@ -17,6 +17,8 @@ brew "openssl@3"
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
 # Swiss army knife for network attacks and monitoring
 brew "bettercap"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
@@ -51,6 +53,8 @@ brew "exiftool"
 brew "eza"
 # Library for fast text representation and classification
 brew "fasttext"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # SDL2 compatibility layer that uses SDL3 behind the scenes
 brew "sdl2-compat"
 # Play, record, convert, and stream select audio and video codecs
@@ -59,6 +63,8 @@ brew "ffmpeg"
 brew "portaudio"
 # Generic library support script
 brew "libtool"
+# Command-line fuzzy finder written in Go
+brew "fzf"
 # Geometry Engine
 brew "geos"
 # GitHub command-line tool
@@ -101,6 +107,8 @@ brew "php"
 brew "proj"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.12"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Safe, concurrent, practical language
 brew "rust"
 # Display and control your Android device
