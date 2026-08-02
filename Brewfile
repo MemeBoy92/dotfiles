@@ -180,9 +180,13 @@ cask "miniconda"
 cask "numi"
 # Monitors computer mic and webcam
 cask "oversight"
+# Scans, detects, and monitors keyboard taps
+cask "reikey"
 # Launcher & command palette
 cask "sol"
 # Tool to explore all the running tasks (processes)
 cask "taskexplorer"
+# Network protocol analyzer
+cask "wireshark-app"
 go "github.com/zmap/zgrab2/cmd/zgrab2"
 npm "clawhub"
