@@ -1,13 +1,14 @@
 #!/bin/bash
 
-# JankyBorders Configuration - Hyprland Signature Aesthetic
-# Active window: Official Hyprland default cyan (#33ccff) to spring green (#00ff99) gradient
-# Inactive window: Official Hyprland default dark gray (#595959) border
+# JankyBorders Configuration - Catppuccin Mocha Aesthetic
+# Active window: Catppuccin Blue (#89b4fa) to Mauve (#cba6f7) gradient
+# Inactive window: Catppuccin Surface0 (#313244) border
 
 borders \
     style=round \
     width=4.0 \
     hidpi=on \
-    ax_focus=on \
-    active_color="gradient(top_left=0xff33ccff,bottom_right=0xff00ff99)" \
-    inactive_color="0xaa595959"
+    ax_focus=off \
+    active_color="gradient(top_left=0xff89b4fa,bottom_right=0xffcba6f7)" \
+    inactive_color="0xaa313244"
+

@@ -149,6 +149,8 @@ brew "zoxide"
 brew "dimentium/autoraise/autoraise", trusted: true
 # A window border system for macOS
 brew "felixkratz/formulae/borders"
+# Custom macOS statusbar with shell plugin, interaction and graph support
+brew "felixkratz/formulae/sketchybar"
 # AI-powered penetration testing CLI tool with terminal UI
 brew "pensarai/tap/apex", trusted: true
 # Hollywood

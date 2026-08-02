@@ -21,9 +21,13 @@ enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
 # Callbacks / Event Hooks
-after-startup-command = []
+after-startup-command = [
+    'exec-and-forget sketchybar'
+]
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 on-focus-changed = ['move-mouse window-lazy-center']
+exec-on-workspace-change = ['/bin/bash', '-c', 'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE']
+
 
 
 # Gaps / Window Spacing
@@ -57,6 +61,7 @@ run = 'exec-and-forget /bin/bash /Users/jake/.config/aerospace/smart-layout.sh'
     ctrl-alt-enter = 'exec-and-forget open -a Ghostty'
 
     # Layout Toggles
+    ctrl-alt-b = 'exec-and-forget sketchybar --bar hidden=toggle'
     ctrl-alt-g = 'exec-and-forget /bin/bash /Users/jake/.config/aerospace/smart-layout.sh'
     ctrl-alt-slash = 'layout tiles horizontal vertical'
     ctrl-alt-comma = 'layout accordion horizontal vertical'
