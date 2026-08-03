@@ -1,0 +1,85 @@
+# ==============================================================================
+# SketchyBar Configuration (Waybar-style for AeroSpace & macOS)
+# ==============================================================================
+
+# Set CONFIG_DIR if not set by environment
+CONFIG_DIR="${CONFIG_DIR:-$HOME/.config/sketchybar}"
+
+# Global Bar Properties
+sketchybar --bar height=38 \
+                  color=0xff181825 \
+                  border_color=0xff313244 \
+                  border_width=0 \
+                  corner_radius=0 \
+                  position=top \
+                  topmost=on \
+                  show_in_fullscreen=on \
+                  padding_left=12 \
+                  padding_right=12
+
+# Default Item Properties
+sketchybar --default icon.font="Hack Nerd Font:Bold:14.0" \
+                     label.font="SF Pro:Semibold:13.0" \
+                     icon.color=0xffcdd6f4 \
+                     label.color=0xffcdd6f4 \
+                     background.height=26 \
+                     background.corner_radius=6 \
+                     padding_left=5 \
+                     padding_right=5
+
+# Custom Event for AeroSpace Workspace Change
+sketchybar --add event aerospace_workspace_change
+
+# ------------------------------------------------------------------------------
+# Left Side: AeroSpace Workspaces & Active Application
+# ------------------------------------------------------------------------------
+for i in {1..9}; do
+  sketchybar --add item space.$i left \
+             --subscribe space.$i aerospace_workspace_change \
+             --set space.$i label="$i" \
+                            label.padding_left=8 \
+                            label.padding_right=8 \
+                            script="$CONFIG_DIR/plugins/aerospace.sh $i" \
+                            click_script="aerospace workspace $i"
+done
+
+sketchybar --add bracket spaces '/space\..*/' \
+           --set spaces background.color=0xff181825 \
+                        background.corner_radius=8 \
+                        background.padding_left=4 \
+                        background.padding_right=4
+
+sketchybar --add item front_app left \
+           --subscribe front_app front_app_switched \
+           --set front_app label.font="SF Pro:Bold:13.0" \
+                           label.color=0xff89b4fa \
+                           script="$CONFIG_DIR/plugins/front_app.sh"
+
+# ------------------------------------------------------------------------------
+# Right Side: System Stats & Clock
+# ------------------------------------------------------------------------------
+sketchybar --add item clock right \
+           --subscribe clock system_woke \
+           --set clock update_freq=10 \
+                       script="$CONFIG_DIR/plugins/clock.sh"
+
+sketchybar --add item battery right \
+           --subscribe battery power_source_change system_woke \
+           --set battery update_freq=60 \
+                         script="$CONFIG_DIR/plugins/battery.sh"
+
+sketchybar --add item volume right \
+           --subscribe volume volume_change \
+           --set volume script="$CONFIG_DIR/plugins/volume.sh"
+
+sketchybar --add item ram right \
+           --set ram update_freq=2 \
+                     script="$CONFIG_DIR/plugins/ram.sh"
+
+sketchybar --add item wifi right \
+           --set wifi update_freq=10 \
+                      script="$CONFIG_DIR/plugins/wifi.sh"
+
+
+# Global Update Call
+sketchybar --update

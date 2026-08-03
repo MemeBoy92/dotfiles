@@ -18,6 +18,7 @@ brew bundle dump --file="$DOTFILES_DIR/Brewfile" --force &>/dev/null
 [ -d "$HOME/.config/borders" ] && cp -r "$HOME/.config/borders/"* "$DOTFILES_DIR/borders/" 2>/dev/null || true
 [ -d "$HOME/.config/AutoRaise" ] && cp -r "$HOME/.config/AutoRaise/"* "$DOTFILES_DIR/AutoRaise/" 2>/dev/null || true
 [ -d "$HOME/.config/btop" ] && cp -r "$HOME/.config/btop/"* "$DOTFILES_DIR/btop/" 2>/dev/null || true
+[ -d "$HOME/.config/sketchybar" ] && mkdir -p "$DOTFILES_DIR/sketchybar" && cp -r "$HOME/.config/sketchybar/"* "$DOTFILES_DIR/sketchybar/" 2>/dev/null || true
 
 # Check for git changes
 if [[ -n $(git status --porcelain) ]]; then
