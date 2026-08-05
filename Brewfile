@@ -162,6 +162,8 @@ cask "android-platform-tools"
 cask "font-sf-pro"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Graphically shows disk usage within a file system
+cask "grandperspective"
 # Windows manager and desktop organiser
 cask "hazeover"
 # Tool to show what is persistently installed on the computer
