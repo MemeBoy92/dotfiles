@@ -15,20 +15,23 @@ fi
 SSID=$(ipconfig getsummary "$WIFI_INT" 2>/dev/null | grep " SSID :" | awk -F ' : ' '{print $2}')
 
 if [ "$SSID" = "<redacted>" ] || [ -z "$SSID" ]; then
+  # Fetch fresh SSID in background via system_profiler
+  (
+    FETCHED=$(system_profiler SPAirPortDataType 2>/dev/null | awk '/Current Network Information:/{getline; $1=$1; print $1}' | head -n 1 | tr -d ':')
+    if [ -n "$FETCHED" ] && [ "$FETCHED" != "Network" ]; then
+      echo "$FETCHED" > "$CACHE_FILE"
+      sketchybar --set "$NAME" label="WIFI ${FETCHED}"
+    fi
+  ) &
+
   if [ -s "$CACHE_FILE" ]; then
     SSID=$(cat "$CACHE_FILE" | head -n 1)
   else
     SSID="Connected"
-    (
-      FETCHED=$(system_profiler SPAirPortDataType 2>/dev/null | awk '/Current Network Information:/{getline; print $1}' | head -n 1 | tr -d ':')
-      if [ -n "$FETCHED" ] && [ "$FETCHED" != "Network" ]; then
-        echo "$FETCHED" > "$CACHE_FILE"
-        sketchybar --set "$NAME" label="WIFI ${FETCHED}"
-      fi
-    ) &
   fi
 else
   echo "$SSID" > "$CACHE_FILE"
 fi
 
 sketchybar --set "$NAME" label="WIFI ${SSID}"
+

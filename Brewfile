@@ -166,6 +166,8 @@ cask "ghostty"
 cask "grandperspective"
 # Windows manager and desktop organiser
 cask "hazeover"
+# Electronics design automation suite
+cask "kicad"
 # Tool to show what is persistently installed on the computer
 cask "knockknock"
 # Utility to display the lid angle and play a creaking sound
