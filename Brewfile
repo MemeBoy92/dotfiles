@@ -69,6 +69,8 @@ brew "fzf"
 brew "geos"
 # GitHub command-line tool
 brew "gh"
+# OCR (Optical Character Recognition) engine
+brew "tesseract"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # World's fastest and most advanced password recovery utility
@@ -89,6 +91,8 @@ brew "libolm"
 brew "libpcap"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.14"
+# Music engraving system
+brew "lilypond"
 # Port scanning utility for large networks
 brew "nmap"
 # Open-source, cross-platform JavaScript runtime environment
@@ -131,8 +135,6 @@ brew "speedtest-cli"
 brew "switchaudio-osx"
 # User interface to the TELNET protocol
 brew "telnet"
-# OCR (Optical Character Recognition) engine
-brew "tesseract"
 # Simplified and community-driven man pages
 brew "tldr"
 # Tool for creating isolated virtual python environments
