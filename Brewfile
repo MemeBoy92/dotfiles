@@ -84,7 +84,7 @@ brew "hwloc"
 # Tunnel IPv4 traffic through a DNS server
 brew "iodine"
 # Style and grammar checker
-brew "languagetool"
+brew "languagetool", restart_service: :changed
 # Implementation of the Double Ratchet cryptographic ratchet
 brew "libolm"
 # Portable library for network traffic capture
