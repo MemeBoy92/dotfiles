@@ -39,6 +39,10 @@ brew "docker"
 brew "docker-buildx"
 # Isolated development environments using Docker
 brew "docker-compose"
+# Use Realtek DVB-T dongles as a cheap SDR
+brew "librtlsdr"
+# FlightAware ADS-B Ground Station System for SDRs
+brew "dump1090-fa"
 # Select default apps for documents and URL schemes on macOS
 brew "duti"
 # GNU compiler collection
@@ -84,7 +88,7 @@ brew "hwloc"
 # Tunnel IPv4 traffic through a DNS server
 brew "iodine"
 # Style and grammar checker
-brew "languagetool", restart_service: :changed
+brew "languagetool"
 # Implementation of the Double Ratchet cryptographic ratchet
 brew "libolm"
 # Portable library for network traffic capture
@@ -111,8 +115,14 @@ brew "php"
 brew "proj"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.12"
+# Python interface to Tcl/Tk
+brew "python-tk@3.12"
+# Python interface to Tcl/Tk
+brew "python-tk@3.14"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Program to decode radio transmissions from devices
+brew "rtl_433"
 # Safe, concurrent, practical language
 brew "rust"
 # Display and control your Android device
@@ -129,6 +139,10 @@ brew "sdl2_mixer"
 brew "sdl2_net"
 # GNU's portable shell tool
 brew "shtool"
+# Vendor and platform neutral SDR support library
+brew "soapysdr"
+# SoapySDR RTL-SDR Support Module
+brew "soapyrtlsdr"
 # Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
 # Change macOS audio source from the command-line
@@ -164,6 +178,8 @@ cask "android-platform-tools"
 cask "font-sf-pro"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Software-defined radio receiver powered by GNU Radio and Qt
+cask "gqrx"
 # Graphically shows disk usage within a file system
 cask "grandperspective"
 # Windows manager and desktop organiser
