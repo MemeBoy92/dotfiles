@@ -4,6 +4,7 @@ tap "barredewe/cask", trusted: true
 tap "dimentium/autoraise"
 tap "felixkratz/formulae", trusted: true
 tap "jzaleski/jzaleski", trusted: { formulae: ["apg"] }
+tap "kismetwireless/kismet", trusted: true
 tap "nikitabobko/tap"
 tap "pensarai/tap", trusted: true
 tap "real-aazam/aazam"
@@ -23,6 +24,8 @@ brew "bat"
 brew "bettercap"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
+# Ultralightweight JSON parser in ANSI C
+brew "cjson"
 # Cross-platform make
 brew "cmake"
 # Console Matrix
@@ -89,14 +92,20 @@ brew "hwloc"
 brew "iodine"
 # Style and grammar checker
 brew "languagetool"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.14"
+# Bluetooth baseband decoding library
+brew "libbtbb"
 # Implementation of the Double Ratchet cryptographic ratchet
 brew "libolm"
 # Portable library for network traffic capture
 brew "libpcap"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.14"
+# C websockets server library
+brew "libwebsockets"
 # Music engraving system
 brew "lilypond"
+# Message broker implementing the MQTT protocol
+brew "mosquitto"
 # Port scanning utility for large networks
 brew "nmap"
 # Open-source, cross-platform JavaScript runtime environment
@@ -109,6 +118,8 @@ brew "nowplaying-cli"
 brew "nuclei"
 # Optimized BLAS library
 brew "openblas"
+# Perl compatible regular expressions library
+brew "pcre"
 # General-purpose scripting language
 brew "php"
 # Cartographic Projections Library
@@ -151,6 +162,8 @@ brew "switchaudio-osx"
 brew "telnet"
 # Simplified and community-driven man pages
 brew "tldr"
+# Host tools for Project Ubertooth
+brew "ubertooth"
 # Tool for creating isolated virtual python environments
 brew "virtualenv"
 # Internet file retriever
@@ -167,6 +180,8 @@ brew "dimentium/autoraise/autoraise", trusted: true
 brew "felixkratz/formulae/borders"
 # Custom macOS statusbar with shell plugin, interaction and graph support
 brew "felixkratz/formulae/sketchybar"
+# Kismet Wi-Fi and Wireless Sniffer
+brew "kismetwireless/kismet/kismet"
 # AI-powered penetration testing CLI tool with terminal UI
 brew "pensarai/tap/apex", trusted: true
 # Hollywood
