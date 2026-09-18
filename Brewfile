@@ -14,6 +14,8 @@ brew "pcre2"
 brew "aircrack-ng"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
+# Download with resuming and segmented downloading
+brew "aria2"
 # Automatic configure script builder
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
@@ -190,6 +192,8 @@ brew "real-aazam/aazam/hollywood", trusted: true
 cask "nikitabobko/tap/aerospace", trusted: true
 # Android SDK component
 cask "android-platform-tools"
+# Monitors common persistence locations
+cask "blockblock"
 cask "font-sf-pro"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
@@ -217,6 +221,8 @@ cask "miniconda"
 cask "numi"
 # Monitors computer mic and webcam
 cask "oversight"
+# Protect your personal files
+cask "ransomwhere"
 # Scans, detects, and monitors keyboard taps
 cask "reikey"
 # Launcher & command palette
