@@ -60,6 +60,8 @@ brew "eccodes"
 brew "exiftool"
 # Modern, maintained replacement for ls
 brew "eza"
+# Like neofetch, but much faster because written mostly in C
+brew "fastfetch"
 # Library for fast text representation and classification
 brew "fasttext"
 # Simple, fast and user-friendly alternative to find
@@ -106,6 +108,8 @@ brew "libpcap"
 brew "libwebsockets"
 # Music engraving system
 brew "lilypond"
+# Modern and intuitive terminal-based text editor
+brew "micro"
 # Message broker implementing the MQTT protocol
 brew "mosquitto"
 # Port scanning utility for large networks
@@ -150,6 +154,8 @@ brew "sdl2_image"
 brew "sdl2_mixer"
 # Small sample cross-platform networking library
 brew "sdl2_net"
+# 7-Zip is a file archiver with a high compression ratio
+brew "sevenzip"
 # GNU's portable shell tool
 brew "shtool"
 # Vendor and platform neutral SDR support library
@@ -192,6 +198,8 @@ brew "real-aazam/aazam/hollywood", trusted: true
 cask "nikitabobko/tap/aerospace", trusted: true
 # Android SDK component
 cask "android-platform-tools"
+# Virtual Audio Driver
+cask "blackhole-2ch"
 # Monitors common persistence locations
 cask "blockblock"
 cask "font-sf-pro"
@@ -201,10 +209,6 @@ cask "ghostty"
 cask "gqrx"
 # Graphically shows disk usage within a file system
 cask "grandperspective"
-# Windows manager and desktop organiser
-cask "hazeover"
-# Electronics design automation suite
-cask "kicad"
 # Tool to show what is persistently installed on the computer
 cask "knockknock"
 # Utility to display the lid angle and play a creaking sound
@@ -215,8 +219,6 @@ cask "lulu"
 cask "maccy"
 # Utility to extend trackpad functionality
 cask "middleclick"
-# Minimal installer for conda
-cask "miniconda"
 # Calculator and converter application
 cask "numi"
 # Monitors computer mic and webcam
