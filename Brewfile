@@ -12,6 +12,8 @@ tap "real-aazam/aazam"
 brew "pcre2"
 # Next-generation aircrack with lots of new features
 brew "aircrack-ng"
+# Plugin manager for zsh, inspired by antigen and antibody
+brew "antidote"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
 # Download with resuming and segmented downloading
