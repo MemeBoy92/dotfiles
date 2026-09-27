@@ -334,6 +334,10 @@ bar {
 # Autostart Services
 # ==============================================================================
 
+# Import Wayland environment for systemd user session & D-Bus (ensures xdg-desktop-portal screen sharing works)
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
 # Polkit authentication agent
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
