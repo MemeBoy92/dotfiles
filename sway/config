@@ -146,6 +146,7 @@ bindsym $mod+Control+l exec swaylock -f -c 1e1e2e
 bindsym $mod+Shift+x exec swaylock -f -c 1e1e2e
 
 # App Launcher & Switchers (Rofi Wayland)
+bindsym $mod+space exec rofi -show drun
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+t exec rofi -show window
 bindsym $mod+c exec "cliphist list | rofi -dmenu -p 'Clipboard' | cliphist decode | wl-copy"
@@ -218,7 +219,7 @@ bindsym $mod+f fullscreen toggle
 bindsym Control+Mod1+f fullscreen toggle
 bindsym $mod+Shift+space floating toggle
 bindsym Control+Mod1+space floating toggle
-bindsym $mod+space focus mode_toggle
+bindsym $mod+backslash focus mode_toggle
 bindsym $mod+a focus parent
 
 # ==============================================================================
