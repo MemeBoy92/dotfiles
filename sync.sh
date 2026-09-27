@@ -29,6 +29,8 @@ fi
 [ -f "$HOME/.config/i3/config" ] && mkdir -p "$DOTFILES_DIR/i3" && cp "$HOME/.config/i3/config" "$DOTFILES_DIR/i3/config"
 [ -f "$HOME/.config/i3/i3blocks.conf" ] && mkdir -p "$DOTFILES_DIR/i3" && cp "$HOME/.config/i3/i3blocks.conf" "$DOTFILES_DIR/i3/i3blocks.conf"
 [ -f "$HOME/.config/picom.conf" ] && mkdir -p "$DOTFILES_DIR/picom" && cp "$HOME/.config/picom.conf" "$DOTFILES_DIR/picom/picom.conf"
+[ -f "$HOME/.config/dunst/dunstrc" ] && mkdir -p "$DOTFILES_DIR/dunst" && cp "$HOME/.config/dunst/dunstrc" "$DOTFILES_DIR/dunst/dunstrc"
+[ -f "$HOME/.config/greenclip.toml" ] && mkdir -p "$DOTFILES_DIR/greenclip" && cp "$HOME/.config/greenclip.toml" "$DOTFILES_DIR/greenclip/greenclip.toml"
 [ -f "$HOME/.local/share/rofi/themes/catppuccin-mocha.rasi" ] && mkdir -p "$DOTFILES_DIR/rofi" && cp "$HOME/.local/share/rofi/themes/catppuccin-mocha.rasi" "$DOTFILES_DIR/rofi/catppuccin-mocha.rasi"
 
 # Check for git changes
