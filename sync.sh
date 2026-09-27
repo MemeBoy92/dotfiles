@@ -42,6 +42,7 @@ sync_file "$HOME/.config/sway/config" "$DOTFILES_DIR/sway/config"
 sync_file "$HOME/.config/waybar/config.jsonc" "$DOTFILES_DIR/waybar/config.jsonc"
 sync_file "$HOME/.config/waybar/style.css" "$DOTFILES_DIR/waybar/style.css"
 sync_file "$HOME/.config/dunst/dunstrc" "$DOTFILES_DIR/dunst/dunstrc"
+sync_file "$HOME/.config/rofi/config.rasi" "$DOTFILES_DIR/rofi/config.rasi"
 sync_file "$HOME/.local/share/rofi/themes/catppuccin-mocha.rasi" "$DOTFILES_DIR/rofi/catppuccin-mocha.rasi"
 
 # Check for git changes

@@ -41,6 +41,7 @@ elif [[ "$(uname)" == "Linux" ]]; then
     [ -f "$DOTFILES/waybar/style.css" ] && link_file "$DOTFILES/waybar/style.css" "$HOME/.config/waybar/style.css"
     # Shared Linux utilities
     [ -f "$DOTFILES/dunst/dunstrc" ] && link_file "$DOTFILES/dunst/dunstrc" "$HOME/.config/dunst/dunstrc"
+    [ -f "$DOTFILES/rofi/config.rasi" ] && link_file "$DOTFILES/rofi/config.rasi" "$HOME/.config/rofi/config.rasi"
     [ -f "$DOTFILES/rofi/catppuccin-mocha.rasi" ] && link_file "$DOTFILES/rofi/catppuccin-mocha.rasi" "$HOME/.local/share/rofi/themes/catppuccin-mocha.rasi"
 fi
 

@@ -61,4 +61,4 @@ eval "$(uvx --generate-shell-completion zsh)"
 
 
 # Added by Antigravity CLI installer
-export PATH="/home/jakem/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
