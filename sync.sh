@@ -41,13 +41,8 @@ sync_file "$HOME/.config/aerospace/aerospace.toml" "$DOTFILES_DIR/aerospace/.aer
 sync_file "$HOME/.config/sway/config" "$DOTFILES_DIR/sway/config"
 sync_file "$HOME/.config/waybar/config.jsonc" "$DOTFILES_DIR/waybar/config.jsonc"
 sync_file "$HOME/.config/waybar/style.css" "$DOTFILES_DIR/waybar/style.css"
-sync_file "$HOME/.config/i3/config" "$DOTFILES_DIR/i3/config"
-sync_file "$HOME/.config/i3/i3blocks.conf" "$DOTFILES_DIR/i3/i3blocks.conf"
-sync_file "$HOME/.config/picom.conf" "$DOTFILES_DIR/picom/picom.conf"
 sync_file "$HOME/.config/dunst/dunstrc" "$DOTFILES_DIR/dunst/dunstrc"
-sync_file "$HOME/.config/greenclip.toml" "$DOTFILES_DIR/greenclip/greenclip.toml"
 sync_file "$HOME/.local/share/rofi/themes/catppuccin-mocha.rasi" "$DOTFILES_DIR/rofi/catppuccin-mocha.rasi"
-[ -d "$HOME/.config/i3/scripts" ] && [ "$(realpath "$HOME/.config/i3/scripts" 2>/dev/null)" != "$(realpath "$DOTFILES_DIR/i3/scripts" 2>/dev/null)" ] && mkdir -p "$DOTFILES_DIR/i3/scripts" && cp -r "$HOME/.config/i3/scripts/"* "$DOTFILES_DIR/i3/scripts/" 2>/dev/null || true
 
 # Check for git changes
 if [[ -n $(git status --porcelain) ]]; then

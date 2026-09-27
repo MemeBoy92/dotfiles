@@ -38,15 +38,9 @@ elif [[ "$(uname)" == "Linux" ]]; then
     [ -f "$DOTFILES/sway/config" ] && link_file "$DOTFILES/sway/config" "$HOME/.config/sway/config"
     [ -f "$DOTFILES/waybar/config.jsonc" ] && link_file "$DOTFILES/waybar/config.jsonc" "$HOME/.config/waybar/config.jsonc"
     [ -f "$DOTFILES/waybar/style.css" ] && link_file "$DOTFILES/waybar/style.css" "$HOME/.config/waybar/style.css"
-    # i3 (X11 fallback)
-    [ -f "$DOTFILES/i3/config" ] && link_file "$DOTFILES/i3/config" "$HOME/.config/i3/config"
-    [ -f "$DOTFILES/i3/i3blocks.conf" ] && link_file "$DOTFILES/i3/i3blocks.conf" "$HOME/.config/i3/i3blocks.conf"
-    [ -f "$DOTFILES/picom/picom.conf" ] && link_file "$DOTFILES/picom/picom.conf" "$HOME/.config/picom.conf"
     # Shared Linux utilities
     [ -f "$DOTFILES/dunst/dunstrc" ] && link_file "$DOTFILES/dunst/dunstrc" "$HOME/.config/dunst/dunstrc"
-    [ -f "$DOTFILES/greenclip/greenclip.toml" ] && link_file "$DOTFILES/greenclip/greenclip.toml" "$HOME/.config/greenclip.toml"
     [ -f "$DOTFILES/rofi/catppuccin-mocha.rasi" ] && link_file "$DOTFILES/rofi/catppuccin-mocha.rasi" "$HOME/.local/share/rofi/themes/catppuccin-mocha.rasi"
-    [ -d "$DOTFILES/i3/scripts" ] && ln -sfn "$DOTFILES/i3/scripts" "$HOME/.config/i3/scripts"
 fi
 
 echo "✅ All dotfiles symlinked successfully!"
