@@ -63,7 +63,8 @@ window#waybar {
     color: @text;
 }
 
-#workspaces button.focused {
+#workspaces button.focused,
+#workspaces button.active {
     background-color: @blue;
     color: @mantle;
     font-weight: bold;

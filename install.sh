@@ -38,6 +38,7 @@ elif [[ "$(uname)" == "Linux" ]]; then
     [ -f "$DOTFILES/sway/config" ] && link_file "$DOTFILES/sway/config" "$HOME/.config/sway/config"
     [ -f "$DOTFILES/hypr/hyprland.conf" ] && link_file "$DOTFILES/hypr/hyprland.conf" "$HOME/.config/hypr/hyprland.conf"
     [ -f "$DOTFILES/hypr/hyprlock.conf" ] && link_file "$DOTFILES/hypr/hyprlock.conf" "$HOME/.config/hypr/hyprlock.conf"
+    [ -f "$DOTFILES/hypr/hypridle.conf" ] && link_file "$DOTFILES/hypr/hypridle.conf" "$HOME/.config/hypr/hypridle.conf"
     # Waybar & UI
     [ -f "$DOTFILES/waybar/config.jsonc" ] && link_file "$DOTFILES/waybar/config.jsonc" "$HOME/.config/waybar/config.jsonc"
     [ -f "$DOTFILES/waybar/style.css" ] && link_file "$DOTFILES/waybar/style.css" "$HOME/.config/waybar/style.css"
