@@ -40,6 +40,7 @@ elif [[ "$(uname)" == "Linux" ]]; then
     [ -f "$DOTFILES/dunst/dunstrc" ] && link_file "$DOTFILES/dunst/dunstrc" "$HOME/.config/dunst/dunstrc"
     [ -f "$DOTFILES/greenclip/greenclip.toml" ] && link_file "$DOTFILES/greenclip/greenclip.toml" "$HOME/.config/greenclip.toml"
     [ -f "$DOTFILES/rofi/catppuccin-mocha.rasi" ] && link_file "$DOTFILES/rofi/catppuccin-mocha.rasi" "$HOME/.local/share/rofi/themes/catppuccin-mocha.rasi"
+    [ -d "$DOTFILES/i3/scripts" ] && ln -sfn "$DOTFILES/i3/scripts" "$HOME/.config/i3/scripts"
 fi
 
 echo "✅ All dotfiles symlinked successfully!"

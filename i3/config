@@ -459,9 +459,8 @@ exec --no-startup-id dex --autostart --environment i3
 # uncomment the next line, use arandr to setup displays and save the file as monitor:
 exec --no-startup-id ~/.screenlayout/monitor.sh
 
-# set wallpaper
-# exec --no-startup-id sleep 2 && nitrogen --restore
-exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
+# set wallpaper (Catppuccin Mocha aesthetic, fallback to EndeavourOS default)
+exec --no-startup-id sleep 1 && (sh ~/.fehbg 2>/dev/null || feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png)
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
@@ -497,7 +496,7 @@ exec --no-startup-id /usr/bin/dunst
 
 # Autostart apps as you like
 #exec --no-startup-id sleep 2 && xfce4-terminal
-exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
+#exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 #exec --no-startup-id sleep 3 && thunar
 
 
