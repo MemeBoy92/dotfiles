@@ -39,9 +39,6 @@ sync_file "$HOME/.config/aerospace/aerospace.toml" "$DOTFILES_DIR/aerospace/.aer
 
 # Linux-specific configs
 sync_file "$HOME/.config/sway/config" "$DOTFILES_DIR/sway/config"
-sync_file "$HOME/.config/hypr/hyprland.conf" "$DOTFILES_DIR/hypr/hyprland.conf"
-sync_file "$HOME/.config/hypr/hyprlock.conf" "$DOTFILES_DIR/hypr/hyprlock.conf"
-sync_file "$HOME/.config/hypr/hypridle.conf" "$DOTFILES_DIR/hypr/hypridle.conf"
 sync_file "$HOME/.config/waybar/config.jsonc" "$DOTFILES_DIR/waybar/config.jsonc"
 sync_file "$HOME/.config/waybar/style.css" "$DOTFILES_DIR/waybar/style.css"
 sync_file "$HOME/.config/dunst/dunstrc" "$DOTFILES_DIR/dunst/dunstrc"

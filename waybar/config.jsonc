@@ -6,8 +6,8 @@
     "margin-top": 6,
     "margin-left": 10,
     "margin-right": 10,
-    "modules-left": ["sway/workspaces", "hyprland/workspaces", "sway/mode", "hyprland/submap"],
-    "modules-center": ["sway/window", "hyprland/window"],
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
     "modules-right": [
         "pulseaudio",
         "backlight",
@@ -34,26 +34,6 @@
         "format": "<span style=\"italic\">{}</span>"
     },
     "sway/window": {
-        "format": "{title}",
-        "max-length": 45,
-        "rewrite": {
-            "(.*) — Mozilla Firefox": "󰈹 $1",
-            "(.*) - Ghostty": " $1",
-            "(.*) - Thunar": "󰝰 $1"
-        }
-    },
-    "hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "format": "{name}",
-        "persistent-workspaces": {
-            "*": [1, 2, 3, 4, 5]
-        }
-    },
-    "hyprland/submap": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "hyprland/window": {
         "format": "{title}",
         "max-length": 45,
         "rewrite": {
