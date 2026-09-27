@@ -38,6 +38,9 @@ sync_file "$HOME/.config/aerospace/aerospace.toml" "$DOTFILES_DIR/aerospace/.aer
 [ -d "$HOME/.config/sketchybar" ] && mkdir -p "$DOTFILES_DIR/sketchybar" && cp -r "$HOME/.config/sketchybar/"* "$DOTFILES_DIR/sketchybar/" 2>/dev/null || true
 
 # Linux-specific configs
+sync_file "$HOME/.config/sway/config" "$DOTFILES_DIR/sway/config"
+sync_file "$HOME/.config/waybar/config.jsonc" "$DOTFILES_DIR/waybar/config.jsonc"
+sync_file "$HOME/.config/waybar/style.css" "$DOTFILES_DIR/waybar/style.css"
 sync_file "$HOME/.config/i3/config" "$DOTFILES_DIR/i3/config"
 sync_file "$HOME/.config/i3/i3blocks.conf" "$DOTFILES_DIR/i3/i3blocks.conf"
 sync_file "$HOME/.config/picom.conf" "$DOTFILES_DIR/picom/picom.conf"
