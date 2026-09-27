@@ -58,3 +58,7 @@ alias ai='ollama run llama3.2'
 # uv completion
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/jakem/.local/bin:$PATH"
