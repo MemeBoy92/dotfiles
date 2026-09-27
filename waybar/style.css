@@ -1,6 +1,7 @@
 /* Catppuccin Mocha Palette */
 @define-color base   #1e1e2e;
 @define-color mantle #181825;
+@define-color mantle_trans rgba(24, 24, 37, 0.78);
 @define-color crust  #11111b;
 
 @define-color text     #cdd6f4;
@@ -41,11 +42,11 @@ window#waybar {
 
 /* Modules styling */
 #workspaces {
-    background-color: @mantle;
+    background-color: @mantle_trans;
     margin: 2px 4px;
     padding: 2px 4px;
     border-radius: 12px;
-    border: 1px solid @surface0;
+    border: 1px solid rgba(205, 214, 244, 0.12);
 }
 
 #workspaces button {
@@ -83,11 +84,11 @@ window#waybar {
 }
 
 #window {
-    background-color: @mantle;
+    background-color: @mantle_trans;
     padding: 2px 14px;
     margin: 2px 4px;
     border-radius: 12px;
-    border: 1px solid @surface0;
+    border: 1px solid rgba(205, 214, 244, 0.12);
     color: @lavender;
     font-weight: 500;
 }
@@ -101,11 +102,11 @@ window#waybar {
 #network,
 #clock,
 #tray {
-    background-color: @mantle;
+    background-color: @mantle_trans;
     padding: 2px 10px;
     margin: 2px 3px;
     border-radius: 12px;
-    border: 1px solid @surface0;
+    border: 1px solid rgba(205, 214, 244, 0.12);
     color: @text;
 }
 

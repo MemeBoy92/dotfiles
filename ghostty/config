@@ -11,6 +11,8 @@ font-size = 13.5
 
 # Theme & Colors
 theme = Catppuccin Mocha
+background-opacity = 0.90
+background-blur-radius = 20
 
 # Window & AeroSpace Tiling Compatibility
 macos-titlebar-style = hidden

@@ -34,8 +34,11 @@ if [[ "$(uname)" == "Darwin" ]]; then
     [ -d "$DOTFILES/sketchybar" ] && ln -sfn "$DOTFILES/sketchybar" "$HOME/.config/sketchybar"
 elif [[ "$(uname)" == "Linux" ]]; then
     echo "🐧 Detected Linux configuration..."
-    # Sway (Wayland) & Waybar
+    # Wayland Compositors (Sway & Hyprland)
     [ -f "$DOTFILES/sway/config" ] && link_file "$DOTFILES/sway/config" "$HOME/.config/sway/config"
+    [ -f "$DOTFILES/hypr/hyprland.conf" ] && link_file "$DOTFILES/hypr/hyprland.conf" "$HOME/.config/hypr/hyprland.conf"
+    [ -f "$DOTFILES/hypr/hyprlock.conf" ] && link_file "$DOTFILES/hypr/hyprlock.conf" "$HOME/.config/hypr/hyprlock.conf"
+    # Waybar & UI
     [ -f "$DOTFILES/waybar/config.jsonc" ] && link_file "$DOTFILES/waybar/config.jsonc" "$HOME/.config/waybar/config.jsonc"
     [ -f "$DOTFILES/waybar/style.css" ] && link_file "$DOTFILES/waybar/style.css" "$HOME/.config/waybar/style.css"
     # Shared Linux utilities
