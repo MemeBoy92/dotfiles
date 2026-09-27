@@ -10,11 +10,18 @@ fi
 zsh_plugins=${ZDOTDIR:-$HOME}/.zsh_plugins
 if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugins}.txt ]]; then
   (
-    source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
+    if [[ -f /opt/homebrew/opt/antidote/share/antidote/antidote.zsh ]]; then
+      source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
+    elif [[ -f ${ZDOTDIR:-$HOME}/.antidote/antidote.zsh ]]; then
+      source ${ZDOTDIR:-$HOME}/.antidote/antidote.zsh
+    elif [[ -f /usr/share/zsh-antidote/antidote.zsh ]]; then
+      source /usr/share/zsh-antidote/antidote.zsh
+    fi
     antidote bundle <${zsh_plugins}.txt >${zsh_plugins}.zsh
   )
 fi
-source ${zsh_plugins}.zsh
+autoload -Uz compinit && compinit -C
+[[ -f ${zsh_plugins}.zsh ]] && source ${zsh_plugins}.zsh
 
 # --- User Configuration ---
 export EDITOR='micro'
